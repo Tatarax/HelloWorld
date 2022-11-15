@@ -15,7 +15,24 @@
 		8CBAA51A291F01DB0074ACEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CBAA518291F01DB0074ACEE /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8C617E6529239B0E008AB33D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		8C617E5629239B0E008AB33D /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
+		8C617E5929239B0E008AB33D /* AccountAuthenticationModificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountAuthenticationModificationViewController.swift; sourceTree = "<group>"; };
+		8C617E5C29239B0E008AB33D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		8C617E5E29239B0E008AB33D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CBAA50A291F01DB0074ACEE /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CBAA50D291F01DB0074ACEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CBAA50F291F01DB0074ACEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,10 +54,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C617E5529239B0E008AB33D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C617E5629239B0E008AB33D /* AuthenticationServices.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8C617E5829239B0E008AB33D /* TestError */ = {
+			isa = PBXGroup;
+			children = (
+				8C617E5929239B0E008AB33D /* AccountAuthenticationModificationViewController.swift */,
+				8C617E5B29239B0E008AB33D /* MainInterface.storyboard */,
+				8C617E5E29239B0E008AB33D /* Info.plist */,
+			);
+			path = TestError;
+			sourceTree = "<group>";
+		};
 		8CBAA501291F01DB0074ACEE = {
 			isa = PBXGroup;
 			children = (
 				8CBAA50C291F01DB0074ACEE /* HelloWorld */,
+				8C617E5829239B0E008AB33D /* TestError */,
+				8C617E5529239B0E008AB33D /* Frameworks */,
 				8CBAA50B291F01DB0074ACEE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,6 +114,7 @@
 				8CBAA506291F01DB0074ACEE /* Sources */,
 				8CBAA507291F01DB0074ACEE /* Frameworks */,
 				8CBAA508291F01DB0074ACEE /* Resources */,
+				8C617E6529239B0E008AB33D /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -147,6 +185,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		8C617E5B29239B0E008AB33D /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C617E5C29239B0E008AB33D /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		8CBAA513291F01DB0074ACEE /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -283,6 +329,7 @@
 		8CBAA51F291F01DB0074ACEE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -313,6 +360,7 @@
 		8CBAA520291F01DB0074ACEE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
