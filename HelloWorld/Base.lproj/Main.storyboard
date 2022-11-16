@@ -15,7 +15,7 @@
                     <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fC2-Xm-5KV">
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fC2-Xm-5KV">
                                 <rect key="frame" x="107.5" y="56" width="160" height="160"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
@@ -44,24 +44,27 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="160" id="wA6-wF-h8H"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRI-kG-omX">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRI-kG-omX">
                                 <rect key="frame" x="146" y="592" width="89" height="44"/>
                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="89" id="z8d-yo-nKg"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="89" id="z8d-yo-nKg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Start">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="startButtonActivation" destination="BYZ-38-t0r" eventType="touchUpInside" id="egB-Nk-1Rc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="xkn-wb-G9p" firstAttribute="top" secondItem="zop-fE-qCQ" secondAttribute="bottom" constant="16" id="8ls-Sa-ibE"/>
-                            <constraint firstItem="xRI-kG-omX" firstAttribute="centerX" secondItem="xkn-wb-G9p" secondAttribute="centerX" id="MJd-2r-wpQ"/>
+                            <constraint firstItem="xRI-kG-omX" firstAttribute="centerX" secondItem="xkn-wb-G9p" secondAttribute="centerX" constant="3" id="MJd-2r-wpQ"/>
                             <constraint firstItem="xkn-wb-G9p" firstAttribute="centerX" secondItem="zop-fE-qCQ" secondAttribute="centerX" id="Xe3-wk-zo3"/>
                             <constraint firstItem="zop-fE-qCQ" firstAttribute="centerX" secondItem="fC2-Xm-5KV" secondAttribute="centerX" id="ZVS-WW-euH"/>
                             <constraint firstItem="fC2-Xm-5KV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="56" id="b8i-uI-EfO"/>
@@ -71,6 +74,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="startButton" destination="xRI-kG-omX" id="N1n-xQ-uK4"/>
                         <outlet property="trafficLightGreen" destination="xkn-wb-G9p" id="QiB-QK-XwD"/>
                         <outlet property="trafficLightRed" destination="fC2-Xm-5KV" id="eGc-md-MYf"/>
                         <outlet property="trafficLightYellow" destination="zop-fE-qCQ" id="JxJ-qB-FUA"/>
