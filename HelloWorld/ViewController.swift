@@ -10,9 +10,13 @@ import UIKit
 class ViewController: UIViewController {
 
     enum TrafficLight {
-        case colorRed, colorYellow, colorGreen
+        case colorRed
+        case colorYellow
+        case colorGreen
         
     }
+    
+    var trafficLight = TrafficLight.colorRed
     
     @IBOutlet var trafficLightRed: UIView!
     @IBOutlet var trafficLightYellow: UIView!
@@ -37,18 +41,26 @@ class ViewController: UIViewController {
     
     @IBAction func startButtonActivation() {
         
-        trafficLightRed.alpha = 1
+        
         if trafficLightRed.alpha == 1 {
             startButton.setTitle("Next", for: .normal)
+        } // Не понимаю как реализовать.
+        
+        switch trafficLight {
+        
+        case .colorRed:
+            trafficLightGreen.alpha = 0.3
+            trafficLightRed.alpha = 1
+            trafficLight = .colorYellow
+        case .colorYellow:
+            trafficLightRed.alpha = 0.3
+            trafficLightYellow.alpha = 1
+            trafficLight = .colorGreen
+        case .colorGreen:
+            trafficLightYellow.alpha = 0.3
+            trafficLightGreen.alpha = 1
+            trafficLight = .colorRed
         }
-        
-        switch TrafficLight {
-        case.colorRed:
-            
-        }
-        
-        
-        
     }
-}
 
+}
